@@ -1,0 +1,222 @@
+/* =======================================================================
+   AUTO LIGHT & DARK BACKGROUND (Works for both body + Streamlit container)
+   ======================================================================= */
+
+/* Light Mode */
+body {
+    background-image: url('light-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url('dark-bg.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+/* Streamlit's main container background */
+[data-testid="stAppViewContainer"] {
+    background-image: url('light-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-testid="stAppViewContainer"] {
+        background-image: url('dark-bg.png');
+    }
+}
+
+
+
+/* ========================= CUSTOM CSS FOR MODERN UI ========================= */
+
+/* --- MAIN LAYOUT --- */
+/* Removed because it blocks the background image */
+/*
+.main {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+*/
+
+.main .block-container {
+    padding-top: 2rem;
+}
+
+/* --- SIDEBAR --- */
+.css-1d391kg, .sidebar .sidebar-content {
+    background: linear-gradient(180deg, #2c3e50 0%, #3498db 100%);
+}
+
+/* --- HEADER --- */
+.main-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-clip: text;  
+    -webkit-background-clip: text;  
+    color: transparent; 
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.centered-text {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* --- CARDS --- */
+.metric-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-card h3, .metric-card h4 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+[data-testid="metric-container"] {
+    text-align: center;
+    padding: 10px;
+}
+
+/* --- BUTTONS --- */
+.stButton button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.stButton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* --- RADIO, TABS, FORMS --- */
+.stRadio > div {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+    border: none;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stForm {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- DATAFRAME --- */
+.dataframe {
+    border-radius: 10px;
+    text-align: left;
+}
+
+.dataframe th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.dataframe td {
+    text-align: left;
+    padding: 8px 12px;
+}
+
+/* --- DIVIDER --- */
+hr {
+    margin: 2rem 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+}
+
+/* --- LISTS --- */
+.modern-list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.modern-list li {
+    margin: 8px 0;
+    padding: 5px;
+}
+
+/* --- ALERTS --- */
+.stAlert {
+    border-radius: 10px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* --- FIX WHITE SPACES AND TAB VISIBILITY --- */
+.block-container {
+    padding-top: 0 !important;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    scrollbar-width: thin;
+    margin-bottom: 0 !important;
+}
+
+.metric-card {
+    margin: 5px 0 !important;
+    padding: 15px !important;
+}
+
+.stRadio > div {
+    background: none !important;
+    padding: 0 !important;
+}
