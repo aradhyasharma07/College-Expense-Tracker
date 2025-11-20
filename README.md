@@ -87,18 +87,23 @@ Column validation and preview
 
 College-Expense-Tracker/
 │
-├── app.py                 # Main Streamlit application
+|
+├── app.py
 │
-├── assets/                # Images, icons, CSS
+|
+├── assets/
 │
-├── data/                  # Default or sample CSV files
+|
+├── data/
 │
-├── model/                 # ML model scripts
+|
+├── model/
 │
-├── requirements.txt       # Dependencies
+|
+├── requirements.txt
 │
-└── README.md              # Documentation
-
+|
+└── README.md
 
 
 
