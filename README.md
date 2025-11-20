@@ -88,10 +88,15 @@ Column validation and preview
 College-Expense-Tracker/
 │
 ├── app.py                 # Main Streamlit application
+│
 ├── assets/                # Images, icons, CSS
+│
 ├── data/                  # Default or sample CSV files
+│
 ├── model/                 # ML model scripts
+│
 ├── requirements.txt       # Dependencies
+│
 └── README.md              # Documentation
 
 
@@ -99,15 +104,27 @@ College-Expense-Tracker/
 
 
 🔧 Installation & Setup
+
 1️⃣ Clone the repository
+
 git clone https://github.com/your-username/college-expense-tracker.git
+
 cd college-expense-tracker
 
+
+
 2️⃣ Install dependencies
+
 pip install -r requirements.txt
 
+
+
 3️⃣ Run the application
+
 streamlit run app.py
+
+
+
 
 🧠 Machine Learning Model
 
@@ -129,6 +146,8 @@ Trend visualization
 
 Error metrics like MAE and R²
 
+
+
 📝 Future Improvements
 
 User authentication
@@ -140,6 +159,8 @@ PDF report exports
 Mobile-friendly UI
 
 AI financial recommendations
+
+
 
 🙌 Author
 
